@@ -1,4 +1,7 @@
 import AppBar from "./AppBar";
+import PilotProfile from "./PilotProfile";
+import { useState } from "react";
+import officers from "../officers.json";
 
 
 
@@ -6,15 +9,7 @@ function add(a, b) {
   return a + b;
 }
 
-function PilotProfile(props) {
-  return (
-    <div>
-      <p>Name:{props.name}</p>
-      <p>Rank: {props.rank}</p>
-      <p>Age: {props.age}</p>
-    </div>
-  );
-}
+
 
 export default function App() {
   const imageWeb =
@@ -22,12 +17,23 @@ export default function App() {
   return (
     <>
       <AppBar />
+      <ul>
+        {officers.map((officer) => (
+          <li>
+            <PilotProfile
+              name={officer.Name}
+              rank={officer.Rank}
+              age={officer.Age}
+            />
+          </li>
+        ))}
+      </ul>
       <PilotProfile name="John Doe" rank="Pilot" age="30" />
-      <h1>Hello react {add(9, 10)}</h1>
-      <img
+      {/* <h1>Hello react {add(9, 10)}</h1> */}
+      {/* <img
         src={imageWeb}
         alt="This is a cat"
-      />
+      /> */}
     </>
   );
 }
