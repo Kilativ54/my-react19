@@ -1,11 +1,12 @@
 import Logo from "./Logo"
+import UserMenu from "./UserMenu"
 
 export default function AppBar() {
     return (<header>
         <div>
-<Logo />
-            <p>Welcome</p>
-            <button>Log out</button>
+            <Logo />
+            <UserMenu/>
+            
         </div>
     </header>)
 }
