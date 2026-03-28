@@ -1,15 +1,18 @@
 [
   {
+    "key": 1,
     "Name": "Liam",
     "Rank": "Engineer",
     "Age": 29
   },
   {
+    "key": 2,
     "Name": "Sophia",
     "Rank": "Navigator",
     "Age": 31
   },
   {
+    "key": 3,
     "Name": "Noah",
     "Rank": "Captain",
     "Age": 47

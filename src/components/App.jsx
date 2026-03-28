@@ -19,12 +19,13 @@ export default function App() {
       <AppBar />
       <ul>
         {officers.map((officer) => (
-          <li>
+          <li key={officer.key}>
             <PilotProfile
               name={officer.Name}
               rank={officer.Rank}
               age={officer.Age}
             />
+            <hr />
           </li>
         ))}
       </ul>
