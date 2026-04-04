@@ -21,15 +21,13 @@ export default function App() {
         {officers.map((officer) => (
           <li key={officer.key}>
             <PilotProfile
-              name={officer.Name}
-              rank={officer.Rank}
-              age={officer.Age}
+          pilot={officer}
             />
             <hr />
           </li>
         ))}
       </ul>
-      <PilotProfile name="John Doe" rank="Pilot" age="30" />
+     
       {/* <h1>Hello react {add(9, 10)}</h1> */}
       {/* <img
         src={imageWeb}

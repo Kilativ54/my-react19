@@ -1,20 +1,23 @@
 [
   {
     "key": 1,
-    "Name": "Liam",
-    "Rank": "Engineer",
-    "Age": 29
+    "name": "Liam",
+    "rank": "Engineer",
+    "age": 29,
+    "active": true
   },
   {
     "key": 2,
-    "Name": "Sophia",
-    "Rank": "Navigator",
-    "Age": 31
+    "name": "Sophia",
+    "rank": "Navigator",
+    "age": 31,
+    "active": false
   },
   {
     "key": 3,
-    "Name": "Noah",
-    "Rank": "Captain",
-    "Age": 47
+    "name": "Noah",
+    "rank": "Captain",
+    "age": 47,
+    "active": true
   }
 ]
