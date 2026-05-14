@@ -1,6 +1,6 @@
-import AppBar from "./AppBar";
-import PilotList from "./PilotList";
-import officers from "../officers.json";
+import AppBar from "../AppBar/AppBar";
+import PilotList from "../PilotList";
+import officers from "../../officers.json";
 
 function add(a, b) {
   return a + b;
