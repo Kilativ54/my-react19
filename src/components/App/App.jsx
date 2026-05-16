@@ -1,5 +1,5 @@
 import AppBar from "../AppBar/AppBar";
-import PilotList from "../PilotList";
+import PilotList from "../PilotList/PilotList";
 import officers from "../../officers.json";
 
 function add(a, b) {
@@ -15,7 +15,7 @@ export default function App() {
   return (
     <>
       <AppBar />
-      <PilotList items={officers} />
+      {/* <PilotList items={officers} /> */}
       <h2>Active Officers</h2>
       <PilotList items={activeOfficers} />
       <h2>Young Officers</h2>

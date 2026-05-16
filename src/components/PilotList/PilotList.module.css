@@ -1,0 +1,15 @@
+.list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.item{
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background: var(--accent-bg);
+}
