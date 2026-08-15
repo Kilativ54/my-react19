@@ -1,6 +1,7 @@
 import clsx from "clsx"; 
 import pilotAvataer from "../../assets/lion.jpg";
 import css from "./PilotProfile.module.css";
+import { BsAirplaneFill, BsAlarmFill } from "react-icons/bs";
 
 
 export default function PilotProfile({ pilot: { name, rank, age, active } }) {
@@ -11,8 +12,14 @@ export default function PilotProfile({ pilot: { name, rank, age, active } }) {
     <div>
       <img src={pilotAvataer} alt="photo" />
       <p className={css.text}>Name:{name}</p>
-      <p className={css.text}>Rank: {rank}</p>
-      <p className={css.text}>Age: {age}</p>
+      <p className={css.text}>
+        <BsAirplaneFill className={css.icon} />
+        Rank: {rank}
+      </p>
+      <p className={css.text}>
+        <BsAlarmFill className={css.icon} />
+        Age: {age}
+      </p>
       <p className={statusClsx}>Status: {active ? "Active" : "Retired"}</p>
     </div>
   );
