@@ -2,6 +2,7 @@ import clsx from "clsx";
 import pilotAvataer from "../../assets/lion.jpg";
 import css from "./PilotProfile.module.css";
 import { BsAirplaneFill, BsAlarmFill } from "react-icons/bs";
+import Alien from "../../assets/alien-svgrepo-com.svg";
 
 
 export default function PilotProfile({ pilot: { name, rank, age, active } }) {
@@ -11,7 +12,10 @@ export default function PilotProfile({ pilot: { name, rank, age, active } }) {
   return (
     <div>
       <img src={pilotAvataer} alt="photo" />
-      <p className={css.text}>Name:{name}</p>
+      <p className={css.text}>
+        <Alien color="blueviolet" className={css.icon} />
+        Name:{name}
+      </p>
       <p className={css.text}>
         <BsAirplaneFill className={css.icon} />
         Rank: {rank}
