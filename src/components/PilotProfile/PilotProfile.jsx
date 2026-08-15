@@ -13,7 +13,7 @@ export default function PilotProfile({ pilot: { name, rank, age, active } }) {
     <div>
       <img src={pilotAvataer} alt="photo" />
       <p className={css.text}>
-        <Alien color="blueviolet" className={css.icon} />
+        <Alien color="blueviolet" fill="blueviolet" className={css.icon} />
         Name:{name}
       </p>
       <p className={css.text}>
