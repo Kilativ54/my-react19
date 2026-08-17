@@ -1,3 +1,5 @@
+import css from "./App.module.css";
+
 import { FaBeer } from "react-icons/fa";
 import AppBar from "../AppBar/AppBar";
 import PilotList from "../PilotList/PilotList";
@@ -18,9 +20,10 @@ export default function App() {
   return (
     <>
       <FaBeer />
+      <h1> Styling in React</h1>
       <AppBar />
       {/* <PilotList items={officers} /> */}
-      <h2>Active Officers</h2>
+      <h2 className={css.title}>Active Officers</h2>
       <PilotList items={activeOfficers} />
       <h2>Young Officers</h2>
       <PilotList items={youngOfficers} />
