@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Counter from "../Counter/Counter";
 import css from "./App.module.css";
 
 import { FaBeer } from "react-icons/fa";
@@ -55,9 +55,12 @@ export default function App() {
     <>
       {/* working with useState */}
 
+      <Counter />
+      <Counter />
+
       <div>
         <h1>State in React</h1>
-        <button onClick={handleClickState}>Click me:{ clicks}</button>
+        <button onClick={handleClickState}>Click me:{clicks}</button>
       </div>
 
       {/* working with onClick on MouseEnter on the button */}
