@@ -57,6 +57,8 @@ export default function App() {
 
       <Counter />
       <Counter />
+      <Counter initialValue={5} />
+      <Counter text="Hello" />
 
       <div>
         <h1>State in React</h1>
