@@ -77,9 +77,9 @@ export default function App() {
 
       <div>
         <h1>State in React</h1>
-        <Counter text="A" value={clicks} onX={handleClickState} />
-        <Counter text="B" value={clicks} onX={handleClickState} />
-        <Counter text="C" value={clicks} onX={handleClickState} />
+        <Counter text="A" value={clicks} onChange={handleClickState} />
+        <Counter text="B" value={clicks} onChange={handleClickState} />
+        <Counter text="C" value={clicks} onChange={handleClickState} />
       </div>
 
       {/* working with onClick on MouseEnter on the button */}

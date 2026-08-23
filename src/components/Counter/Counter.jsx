@@ -12,7 +12,10 @@ import { useState } from "react";
 
 // one state for different buttons
 
-export default function Counter({ value, onX, text = "Click me" }) {
-
-    return (<button onClick={onX}>{text}: { value }</button>)
+export default function Counter({ value, onChange, text = "Click me" }) {
+  return (
+    <button onClick={onChange}>
+      {text}: {value}
+    </button>
+  );
 }
