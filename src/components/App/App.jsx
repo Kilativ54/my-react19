@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Counter from "../Counter/Counter";
+import CountDisplay from "../CountDisplay/CountDisplay";
 import css from "./App.module.css";
 
 import { FaBeer } from "react-icons/fa";
@@ -77,6 +78,7 @@ export default function App() {
 
       <div>
         <h1>State in React</h1>
+        <CountDisplay count={ clicks} />
         <Counter text="A" value={clicks} onChange={handleClickState} />
         <Counter text="B" value={clicks} onChange={handleClickState} />
         <Counter text="C" value={clicks} onChange={handleClickState} />
