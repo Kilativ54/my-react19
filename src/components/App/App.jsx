@@ -2,6 +2,7 @@ import { useState } from "react";
 import Counter from "../Counter/Counter";
 import CountDisplay from "../CountDisplay/CountDisplay";
 import css from "./App.module.css";
+import Accordion from "../accordion/accordion";
 
 import { FaBeer } from "react-icons/fa";
 import AppBar from "../AppBar/AppBar";
@@ -28,12 +29,12 @@ const StudentProfile = () => {
       <h1>Student Profile</h1>
     </div>
   );
-}
-
+};
 
 const activeOfficers = officers.filter((officer) => officer.active);
 
 const youngOfficers = officers.filter((officer) => officer.age < 40);
+
 export default function App() {
   const handleClick = (event) => {
     console.log("click");
@@ -64,6 +65,7 @@ export default function App() {
 
   return (
     <>
+      <Accordion />
       {/* working with useState */}
       {/* <Counter />
       <Counter />
@@ -78,7 +80,7 @@ export default function App() {
 
       <div>
         <h1>State in React</h1>
-        <CountDisplay count={ clicks} />
+        <CountDisplay count={clicks} />
         <Counter text="A" value={clicks} onChange={handleClickState} />
         <Counter text="B" value={clicks} onChange={handleClickState} />
         <Counter text="C" value={clicks} onChange={handleClickState} />
