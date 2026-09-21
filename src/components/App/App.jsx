@@ -3,6 +3,7 @@ import Counter from "../Counter/Counter";
 import CountDisplay from "../CountDisplay/CountDisplay";
 import css from "./App.module.css";
 import Accordion from "../accordion/accordion";
+import Reader from "../Reader/Reader";
 
 import { FaBeer } from "react-icons/fa";
 import AppBar from "../AppBar/AppBar";
@@ -10,6 +11,7 @@ import PilotList from "../PilotList/PilotList";
 import officers from "../../officers.json";
 
 import clsx from "clsx";
+
 
 function add(a, b) {
   return a + b;
@@ -65,6 +67,7 @@ export default function App() {
 
   return (
     <>
+     <Reader/>
       <Accordion />
       {/* working with useState */}
       {/* <Counter />
