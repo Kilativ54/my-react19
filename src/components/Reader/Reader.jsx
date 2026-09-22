@@ -6,11 +6,11 @@ export default function Reader({ items }) {
     const [selectedIdx, setSelectedIdx] = useState(0);
 
     const handlePrev = () => {
-        setSelectedIdx((selectedIdx - 1 + items.length) % items.length);
+        setSelectedIdx(selectedIdx - 1 );
       };
     
       const handleNext = () => {
-        setSelectedIdx((selectedIdx + 1) % items.length);
+        setSelectedIdx(selectedIdx + 1);
       };
 
     const currentArticle = items[selectedIdx];
@@ -25,7 +25,10 @@ export default function Reader({ items }) {
             <div className={styles.topBar}>
               {" "}
               <span className={styles.label}>READER</span>{" "}
-              <span className={styles.counter}> {selectedIdx + 1} / {items.length} </span>{" "}
+              <span className={styles.counter}>
+                {" "}
+                {selectedIdx + 1} / {items.length}{" "}
+              </span>{" "}
             </div>{" "}
             <div className={styles.progressTrack}>
               {" "}
@@ -34,7 +37,7 @@ export default function Reader({ items }) {
           </header>{" "}
           <article className={styles.article}>
             {" "}
-            <span className={styles.topicNumber}> TEXT 01 </span>{" "}
+            <span className={styles.topicNumber}> TEXT {selectedIdx + 1} </span>{" "}
             <h2 className={styles.title}> Topic </h2>{" "}
             <p className={styles.text}>
               {" "}
@@ -45,7 +48,7 @@ export default function Reader({ items }) {
           </article>{" "}
           <nav className={styles.controls}>
             {" "}
-            <button className={styles.button}>
+            <button className={styles.button} onClick={handlePrev}>
               {" "}
               <span className={styles.arrow}>←</span> Previous{" "}
             </button>{" "}
@@ -58,7 +61,7 @@ export default function Reader({ items }) {
               <span className={styles.dot} /> <span className={styles.dot} />{" "}
               <span className={styles.dot} />{" "}
             </div>{" "}
-            <button className={styles.button}>
+            <button className={styles.button} onClick={handleNext}>
               {" "}
               Next <span className={styles.arrow}>→</span>{" "}
             </button>{" "}
