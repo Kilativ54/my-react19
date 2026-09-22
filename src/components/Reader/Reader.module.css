@@ -1,122 +1,260 @@
 ```css
 .container {
   min-height: 100vh;
-  background: #f5f6f8;
-  color: #1f2937;
-  padding: 2rem 1rem;
+  padding: 60px 40px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(99, 102, 241, 0.08),
+      transparent 35%
+    ),
+    #f6f7fb;
+
+  color: #1e293b;
 }
 
-.header {
+.reader {
   width: 100%;
   max-width: 900px;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto;
 }
 
-.controls {
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  margin-bottom: 24px;
+}
+
+.topBar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
 }
 
-.button {
-  padding: 0.65rem 1.1rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
-  background: #ffffff;
-  color: #374151;
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.1s ease;
+.label {
+  color: #6366f1;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
 }
 
-.button:hover {
-  background: #f9fafb;
-  border-color: #9ca3af;
+.counter {
+  color: #64748b;
+
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.button:active {
-  transform: translateY(1px);
+/* =========================
+   PROGRESS
+========================= */
+
+.progressTrack {
+  width: 100%;
+  height: 6px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #e2e8f0;
 }
 
-.button:focus-visible {
-  outline: 3px solid rgba(59, 130, 246, 0.25);
-  outline-offset: 2px;
+.progressBar {
+  width: 10%;
+  height: 100%;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #6366f1,
+    #8b5cf6
+  );
 }
+
+/* =========================
+   ARTICLE
+========================= */
 
 .article {
-  width: 100%;
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 2.5rem 3rem;
+  min-height: 420px;
+
+  padding: 65px 75px;
+
   background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.08),
+    0 4px 12px rgba(15, 23, 42, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.article:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 25px 60px rgba(15, 23, 42, 0.1),
+    0 5px 15px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================
+   ARTICLE CONTENT
+========================= */
+
+.topicNumber {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: #6366f1;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
 }
 
 .title {
-  margin: 0 0 1.5rem;
-  color: #111827;
-  font-size: 2rem;
-  line-height: 1.2;
+  margin: 0 0 24px;
+
+  color: #0f172a;
+
+  font-size: 42px;
+  line-height: 1.15;
   font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 .text {
+  max-width: 700px;
+
   margin: 0;
-  color: #4b5563;
-  font-size: 1.1rem;
-  line-height: 1.8;
+
+  color: #475569;
+
+  font-size: 18px;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
 }
 
-/* Tablet */
-@media (max-width: 768px) {
-  .container {
-    padding: 1.5rem 1rem;
-  }
+/* =========================
+   CONTROLS
+========================= */
 
-  .article {
-    padding: 2rem;
-  }
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  .title {
-    font-size: 1.75rem;
-  }
+  gap: 24px;
+
+  margin-top: 24px;
 }
 
-/* Mobile */
-@media (max-width: 480px) {
-  .container {
-    padding: 1rem 0.75rem;
-  }
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .header {
-    margin-bottom: 1rem;
-  }
+  gap: 9px;
 
-  .button {
-    flex: 1;
-    padding: 0.7rem 0.8rem;
-  }
+  min-width: 130px;
 
-  .article {
-    padding: 1.5rem 1.25rem;
-    border-radius: 0.5rem;
-  }
+  padding: 13px 20px;
 
-  .title {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
 
-  .text {
-    font-size: 1rem;
-    line-height: 1.7;
-  }
+  background: #ffffff;
+  color: #334155;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.button:hover {
+  border-color: #c7d2fe;
+
+  background: #eef2ff;
+  color: #4f46e5;
+
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.12);
+
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.25);
+  outline-offset: 3px;
+}
+
+.arrow {
+  font-size: 17px;
+}
+
+/* =========================
+   PAGE DOTS
+========================= */
+
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  flex: 1;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #cbd5e1;
+
+  transition:
+    width 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.dot:hover {
+  transform: scale(1.25);
+
+  background: #94a3b8;
+}
+
+.activeDot {
+  width: 25px;
+
+  border-radius: 999px;
+
+  background: #6366f1;
 }

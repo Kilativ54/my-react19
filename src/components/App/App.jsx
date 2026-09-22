@@ -4,6 +4,7 @@ import CountDisplay from "../CountDisplay/CountDisplay";
 import css from "./App.module.css";
 import Accordion from "../accordion/accordion";
 import Reader from "../Reader/Reader";
+import articles from ' ../../../src/article.json'
 
 import { FaBeer } from "react-icons/fa";
 import AppBar from "../AppBar/AppBar";
@@ -67,7 +68,7 @@ export default function App() {
 
   return (
     <>
-     <Reader/>
+     <Reader items={articles}/>
       <Accordion />
       {/* working with useState */}
       {/* <Counter />
