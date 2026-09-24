@@ -13,7 +13,10 @@ export default function Reader({ items }) {
         setSelectedIdx(selectedIdx + 1);
       };
 
-    const currentArticle = items[selectedIdx];
+  const currentArticle = items[selectedIdx];
+  
+  const isFirstEl = selectedIdx === 0;
+  const isLastEl = selectedIdx === items.length - 1;
 
     return (
       <div className={styles.container}>
@@ -37,8 +40,8 @@ export default function Reader({ items }) {
           </header>{" "}
           <article className={styles.article}>
             {" "}
-            <span className={styles.topicNumber}> TEXT {selectedIdx + 1} </span>{" "}
-            <h2 className={styles.title}> Topic </h2>{" "}
+            <span className={styles.topicNumber}> {currentArticle.text} {selectedIdx + 1} </span>{" "}
+            <h2 className={styles.title}> {currentArticle.title} </h2>{" "}
             <p className={styles.text}>
               {" "}
               This is the text content of the reader. You can replace this text
@@ -48,7 +51,7 @@ export default function Reader({ items }) {
           </article>{" "}
           <nav className={styles.controls}>
             {" "}
-            <button className={styles.button} onClick={handlePrev}>
+            <button className={styles.button} onClick={handlePrev} disabled={isFirstEl}>
               {" "}
               <span className={styles.arrow}>←</span> Previous{" "}
             </button>{" "}
@@ -61,7 +64,7 @@ export default function Reader({ items }) {
               <span className={styles.dot} /> <span className={styles.dot} />{" "}
               <span className={styles.dot} />{" "}
             </div>{" "}
-            <button className={styles.button} onClick={handleNext}>
+            <button className={styles.button} onClick={handleNext} disabled={isLastEl}>
               {" "}
               Next <span className={styles.arrow}>→</span>{" "}
             </button>{" "}
